@@ -5101,3 +5101,24 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 210ms (Views: 201.5ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/admin" for ::1 at 2016-12-07 18:25:15 -0500
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/sumitgautam/.rvm/gems/ruby-2.3.1@rails5.0/bundler/gems/activeadmin-a932d56b156e/app/views/active_admin/page/index.html.arb
+  Rendered /home/sumitgautam/.rvm/gems/ruby-2.3.1@rails5.0/bundler/gems/activeadmin-a932d56b156e/app/views/active_admin/page/index.html.arb (284.4ms)
+Completed 200 OK in 313ms (Views: 286.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/admin/posts" for ::1 at 2016-12-07 18:25:21 -0500
+Processing by Admin::PostsController#index as HTML
+  [1m[36mAdminUser Load (0.8ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = ? ORDER BY "admin_users"."id" ASC LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering /home/sumitgautam/.rvm/gems/ruby-2.3.1@rails5.0/bundler/gems/activeadmin-a932d56b156e/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "posts"[0m
+  [1m[36mCACHE (0.1ms)[0m  [1m[34mSELECT COUNT(count_column) FROM (SELECT  1 AS count_column FROM "posts" LIMIT ? OFFSET ?) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" ORDER BY "posts"."id" desc LIMIT ? OFFSET ?[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  Rendered /home/sumitgautam/.rvm/gems/ruby-2.3.1@rails5.0/bundler/gems/activeadmin-a932d56b156e/app/views/active_admin/resource/index.html.arb (210.7ms)
+Completed 200 OK in 221ms (Views: 212.8ms | ActiveRecord: 1.4ms)
+
+
