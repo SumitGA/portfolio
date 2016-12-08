@@ -6,6 +6,7 @@ gem 'ruby'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 gem 'heroku'
 
+
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -53,7 +54,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 group :production do
-    gem 'pg'
-    gem 'rails_12factor'
+ gem 'pg'
+ gem 'rails_12factor'
 end
 
